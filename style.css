@@ -1,1 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0c4d48
+}
+
+.container {
+    width: 850px;
+    background: #f8ebeb;
+    display: flex;
+    gap: 70px;
+    align-items: flex-end;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
