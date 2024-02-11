@@ -18,3 +18,52 @@ body {
     padding: 60px 40px;
     border-radius: 10px;
 }
+
+.hangman img{
+    max-width:270px;
+}
+
+.hangman h1 {
+    font-size: 1.50rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.letter-display {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter-display .word {
+    width: 28px;
+    font-size: 2rem;
+    font-weight: 550;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #000
+}
+
+.letter-display .word.guessed {
+    border-color: transparent;
+    margin: -40px 0 34px;
+}
+
+.gamebox h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 450;
+    margin-bottom: 15px;
+}
+
+.gamebox h4 b {
+    font-weight: 550;
+}
+
+.gamebox .guess b{
+    color: #940101;
+}
