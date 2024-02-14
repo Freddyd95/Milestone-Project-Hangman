@@ -77,7 +77,7 @@ body {
     justify-content: center;
 }
 
-.keyboard button {
+:where(.result-gif, .keyboard) button {
     color: #000000;
     font-size: 1rem;
     font-weight: 700;
@@ -85,10 +85,13 @@ body {
     outline: none;
     background: #c2920ff7;
     border-radius: 5px;
-    text-transform: uppercase;
+    text-transform: uppercase;  
+    border: none;  
+}
+
+.keyboard button {
     padding: 8px;
-    border: none;
-    width: calc(100% / 10 - 6px);
+    width: calc(100% / 10 -6px);
 }
 
 .keyboard button:hover {
