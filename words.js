@@ -1,4 +1,4 @@
-const wordList = [
+const words = [
     {
         word: "HTML",
         hint: "The standard markup language for documents designed to be displayed in a web browser."

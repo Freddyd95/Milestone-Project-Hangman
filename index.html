@@ -2,7 +2,7 @@
 <html lang="eng">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Milestone Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,15 +10,15 @@
 <body>
     <div class="result-gif">
         <div class="gif-L">
-            <img src="assets/seth-meyers-here-you-go.gif" alt="gif" class="seth-meyers">
+            <img src="assets/lost.gif" alt="gif" class="seth-meyers">
             <h4>Take This L!</h4>
-            <p>The correct word was: <b>HTML is fun!</b></p>
+            <p>The correct word was: <b>HTML</b></p>
             <button class="play-again">Play Again</button>
         </div>
     </div>
     <div class="container">
         <div class="hangman">
-            <img src="assets/3.jpg" alt="hangman-img">
+            <img src="assets/hangman.jpg" alt="hangman-img">
             <h1>Hangman Milestone Project</h1>   
         </div>
         <div class="gamebox">
@@ -26,7 +26,7 @@
             <li class="word"></li>
             <li class="word"></li>
             <li class="word"></li>
-            <li class="word"></li>
+            <li class="word guessed"></li>
             <li class="word"></li>
             <li class="word"></li>
             <li class="word"></li>
@@ -37,7 +37,7 @@
         </h4>
         <h4 class="guess">
             Incorrect:
-            <b>0 / 3</b>
+            <b>0 / 8</b>
         </h4>
         <div class="keyboard">
 
@@ -45,7 +45,7 @@
         </div>    
     </div>
     <script src="words.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
