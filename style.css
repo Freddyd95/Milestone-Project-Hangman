@@ -24,6 +24,9 @@ body {
     align-items: flex-end;
     padding: 60px 40px;
     border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+    justify-content: space-between;
+    border-radius: 10px;
 }
 
 .hangman img{
@@ -64,7 +67,7 @@ body {
 .gamebox h4 {
     text-align: center;
     font-size: 1.1rem;
-    font-weight: 450;
+    font-weight: 500;
     margin-bottom: 15px;
 }
 
@@ -72,7 +75,7 @@ body {
     font-weight: 550;
 }
 
-.gamebox .guess b{
+.gamebox .guesses b{
     color: #940101;
 }
 
@@ -173,4 +176,27 @@ body {
         display: none;
     }
 
+    .gamebox h4 {
+        font-size: 1rem;
+    }
+
+    .letter-display .word {
+        margin-bottom: 37px;
+        font-size: 1.9rem;
+    }
+    .letter-display .word.guessed {
+        margin: -35px 0 25px;
+    }
+    .result-gif img {
+        max-width: 120px;
+    }
+    .result-gif h4 {
+        font-size: 1.50rem;
+    }
+    .result-gif p {
+        font-size: 1.1rem;
+    }
+    .result-gif button {
+        padding: 10px 0 18px;
+    }
 }

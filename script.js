@@ -1,23 +1,21 @@
-const hangmanImage = document.querySelector(".hangman img");
 const letterDisplay = document.querySelector(".letter-display");
-const guessText = document.querySelector(".guess b");
+const guessesText = document.querySelector(".guesses b");
 const keyboardDiv = document.querySelector(".keyboard");
+const hangmanImage = document.querySelector(".hangman img");
 const resultGif = document.querySelector(".result-gif");
 const playAgainbtn = document.querySelector(".play-again");
 
-let currentWord, correctLetters, wrongGuessCount;
+let currentWord, correctLetters, wrongGuessCount;  
 const maxGuesses = 8;
-
-
 const resetGame = () => {
+
     correctLetters = [];
     wrongGuessCount = 0;
     hangmanImage.src = `assets/hangman.jpg`;
-    guessText.innerText =  `${wrongGuessCount} / ${maxGuesses}`;
-    keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
+    guessesText.innerText =  `${wrongGuessCount} / ${maxGuesses}`;
     letterDisplay.innerHTML = currentWord.split("").map(() => '<li class="word"></li>').join("");
-    
-    // resultGif.classList.remove("show");
+    keyboardDiv.querySelectorAll("button").forEach(btn => btn.disabled = false);
+    resultGif.classList.remove("show");
 
 }
 
@@ -45,9 +43,9 @@ const initGame = (button, clickedLetter) => {
     if(currentWord.includes(clickedLetter)) {
         [...currentWord].forEach((letter, index) => {
             if(letter === clickedLetter) {
-                correctLetters.push(letter);
+                correctLetters.push(words);
                 letterDisplay.querySelectorAll("li")[index].innerText = letter;
-                letterDisplay.querySelectorAll("li")[index].classList.add("guess");
+                letterDisplay.querySelectorAll("li")[index].classList.add("guesses");
             }
         })
     } else {
@@ -59,7 +57,7 @@ const initGame = (button, clickedLetter) => {
     }
 
     button.disabled = true;
-    guessText.innerText =  `${wrongGuessCount} / ${maxGuesses}`;
+    guessesText.innerText =  `${wrongGuessCount} / ${maxGuesses}`;
 
     if(wrongGuessCount === maxGuesses) return gameOver(false);
     if(correctLetters.length === currentWord.length) return gameOver(true);
